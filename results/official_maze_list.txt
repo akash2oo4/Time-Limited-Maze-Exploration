@@ -1,0 +1,184 @@
+  skip alljapan-001-1980.txt                only 199/256 cells reachable (smaller active area)
+  skip alljapan-002-1981.txt                only 223/256 cells reachable (smaller active area)
+  skip alljapan-011-1990-frsh.txt           only 227/256 cells reachable (smaller active area)
+  skip alljapan-012-1991-frsh.txt           only 194/256 cells reachable (smaller active area)
+  skip alljapan-013-1992-exp-pre.txt        only 223/256 cells reachable (smaller active area)
+  skip alljapan-013-1992-frsh.txt           only 174/256 cells reachable (smaller active area)
+  skip alljapan-014-1993-exp-pre.txt        only 226/256 cells reachable (smaller active area)
+  skip alljapan-014-1993-frsh.txt           only 198/256 cells reachable (smaller active area)
+  skip alljapan-015-1994-exp-pre.txt        only 217/256 cells reachable (smaller active area)
+  skip alljapan-015-1994-frsh.txt           only 174/256 cells reachable (smaller active area)
+  skip alljapan-016-1995-exp-fin.txt        duplicate of alljapan-013-1992-exp-fin.txt
+  skip alljapan-016-1995-exp-pre.txt        only 235/256 cells reachable (smaller active area)
+  skip alljapan-016-1995-frsh.txt           only 175/256 cells reachable (smaller active area)
+  skip alljapan-017-1996-frsh.txt           only 199/256 cells reachable (smaller active area)
+  skip alljapan-018-1997-exp-pre.txt        only 215/256 cells reachable (smaller active area)
+  skip alljapan-018-1997-frsh.txt           only 140/256 cells reachable (smaller active area)
+  skip alljapan-019-1998-exp-pre.txt        only 205/256 cells reachable (smaller active area)
+  skip alljapan-019-1998-frsh.txt           only 169/256 cells reachable (smaller active area)
+  skip alljapan-028-2007-frsh.txt           only 215/256 cells reachable (smaller active area)
+  skip alljapan-029-2008-frsh.txt           only 199/256 cells reachable (smaller active area)
+  skip alljapan-030-2009-frsh.txt           only 193/256 cells reachable (smaller active area)
+  skip alljapan-031-2010-frsh.txt           only 173/256 cells reachable (smaller active area)
+  skip alljapan-032-2011-frsh-fin.txt       only 230/256 cells reachable (smaller active area)
+  skip alljapan-033-2012-frsh-fin.txt       only 222/256 cells reachable (smaller active area)
+  skip portugal-2022.txt                    only 209/256 cells reachable (smaller active area)
+  skip taiwan2011p.txt                      only 236/256 cells reachable (smaller active area)
+  skip taiwan2015p.txt                      only 134/256 cells reachable (smaller active area)
+  skip uk2001f.txt                          only 224/256 cells reachable (smaller active area)
+  skip uk2008q.txt                          only 179/256 cells reachable (smaller active area)
+  skip uk2011f.txt                          duplicate of alljapan-028-2007-exp-fin.txt
+  skip uk2011follower.txt                   only 228/256 cells reachable (smaller active area)
+  skip uk2023-spring-classic.txt            duplicate of uk-spring-2023-classic.txt
+  skip uk2024-megacon-a.txt                 only 204/256 cells reachable (smaller active area)
+  skip uk2024-megacon-b.txt                 only 227/256 cells reachable (smaller active area)
+  skip uk2024-megacon-c-14x14.txt           only 190/256 cells reachable (smaller active area)
+  skip uk2024-megacon-c.txt                 only 228/256 cells reachable (smaller active area)
+  skip uk2024-megacon-d.txt                 only 216/256 cells reachable (smaller active area)
+  skip uknov2011f.txt                       duplicate of apec2002-2002.txt
+  skip uknov2015f.txt                       only 121/256 cells reachable (smaller active area)
+  skip uknov2016f.txt                       only 121/256 cells reachable (smaller active area)
+
+using 142 official mazes: APEC 19, All-Japan 37, Portugal 10, Taiwan 11, UK 65
+  Portugal  Portugal-2024-Final.txt
+  Portugal  Portugal-2025-Final.txt
+  All-Japan alljapan-003-1982.txt
+  All-Japan alljapan-004-1983.txt
+  All-Japan alljapan-005-1984.txt
+  All-Japan alljapan-006-1985-fin.txt
+  All-Japan alljapan-006-1985-pre.txt
+  All-Japan alljapan-007-1986-fin.txt
+  All-Japan alljapan-007-1986-pre.txt
+  All-Japan alljapan-008-1987-fin.txt
+  All-Japan alljapan-008-1987-pre.txt
+  All-Japan alljapan-009-1988-fin.txt
+  All-Japan alljapan-009-1988-pre.txt
+  All-Japan alljapan-010-1989-fin.txt
+  All-Japan alljapan-010-1989-pre.txt
+  All-Japan alljapan-011-1990-exp-fin.txt
+  All-Japan alljapan-011-1990-exp-pre.txt
+  All-Japan alljapan-012-1991-exp-fin.txt
+  All-Japan alljapan-013-1992-exp-fin.txt
+  All-Japan alljapan-014-1993-exp-fin.txt
+  All-Japan alljapan-015-1994-exp-fin.txt
+  All-Japan alljapan-017-1996-exp-fin.txt
+  All-Japan alljapan-017-1996-exp-pre.txt
+  All-Japan alljapan-018-1997-exp-fin.txt
+  All-Japan alljapan-019-1998-exp-fin.txt
+  All-Japan alljapan-028-2007-exp-fin.txt
+  All-Japan alljapan-029-2008-exp-fin.txt
+  All-Japan alljapan-029-2008-exp-pre.txt
+  All-Japan alljapan-030-2009-exp-fin.txt
+  All-Japan alljapan-030-2009-exp-pre.txt
+  All-Japan alljapan-031-2010-exp-fin.txt
+  All-Japan alljapan-031-2010-exp-pre.txt
+  All-Japan alljapan-032-2011-exp-fin.txt
+  All-Japan alljapan-032-2011-exp-pre.txt
+  All-Japan alljapan-033-2012-exp-fin.txt
+  All-Japan alljapan-033-2012-exp-pre.txt
+  All-Japan alljapan-044-2023-exp-fin.txt
+  All-Japan alljapan-045-2024-exp-fin.txt
+  All-Japan alljapan-046-2025-exp-fin.txt
+  APEC      apec1988.txt
+  APEC      apec1996.txt
+  APEC      apec1997.txt
+  APEC      apec1998.txt
+  APEC      apec2002-2002.txt
+  APEC      apec2009.txt
+  APEC      apec2010.txt
+  APEC      apec2011.txt
+  APEC      apec2012.txt
+  APEC      apec2013.txt
+  APEC      apec2014.txt
+  APEC      apec2016.txt
+  APEC      apec2017.txt
+  APEC      apec2018.txt
+  APEC      apec2019.txt
+  APEC      apec2023.txt
+  APEC      apec2024.txt
+  APEC      apec2025.txt
+  APEC      apec2026.txt
+  Portugal  portugal-2017-final-expert.txt
+  Portugal  portugal-2017-final-novice.txt
+  Portugal  portugal-2017-qualifier.txt
+  Portugal  portugal-2018-final-expert.txt
+  Portugal  portugal-2019-final-expert.txt
+  Portugal  portugal-2019-final-novice.txt
+  Portugal  portugal-2019-qualifier.txt
+  Portugal  portugal-2023.txt
+  Taiwan    taiwan2009f.txt
+  Taiwan    taiwan2011f.txt
+  Taiwan    taiwan2012f.txt
+  Taiwan    taiwan2013f.txt
+  Taiwan    taiwan2014f.txt
+  Taiwan    taiwan2015f.txt
+  Taiwan    taiwan2016f.txt
+  Taiwan    taiwan2017f.txt
+  Taiwan    taiwan2018cef.txt
+  Taiwan    taiwan2023cef.txt
+  Taiwan    taiwan2024.txt
+  UK        uk-spring-2023-classic.txt
+  UK        uk1987f.txt
+  UK        uk1988f.txt
+  UK        uk1989.txt
+  UK        uk1989f.txt
+  UK        uk1989q.txt
+  UK        uk1990f.txt
+  UK        uk1990q.txt
+  UK        uk1991f.txt
+  UK        uk1992f.txt
+  UK        uk1992q.txt
+  UK        uk2000f.txt
+  UK        uk2002f.txt
+  UK        uk2003f.txt
+  UK        uk2003q.txt
+  UK        uk2004f.txt
+  UK        uk2005f.txt
+  UK        uk2005q.txt
+  UK        uk2006f.txt
+  UK        uk2007f.txt
+  UK        uk2008f.txt
+  UK        uk2008final.txt
+  UK        uk2009f.txt
+  UK        uk2009q.txt
+  UK        uk2010f.txt
+  UK        uk2010follower.txt
+  UK        uk2010q.txt
+  UK        uk2011q.txt
+  UK        uk2012f.txt
+  UK        uk2012q.txt
+  UK        uk2013.txt
+  UK        uk2014f.txt
+  UK        uk2015f.txt
+  UK        uk2016f.txt
+  UK        uk2016q.txt
+  UK        uk2017f.txt
+  UK        uk2017q.txt
+  UK        uk2018f.txt
+  UK        uk2018q.txt
+  UK        uk2019f.txt
+  UK        uk2021-haz.txt
+  UK        uk2022-haz.txt
+  UK        uk2022f.txt
+  UK        uk2024-hazlemere.txt
+  UK        uk2024-megacon-e.txt
+  UK        uk2024-stratford-classic.txt
+  UK        uk2025-hazlemere.txt
+  UK        uk2025-megacon-a.txt
+  UK        uk2025-megacon-b.txt
+  UK        uk2025-minos.txt
+  UK        uk2025-spring-classic.txt
+  UK        uk2026-hazlemere.txt
+  UK        uk2026-minos-classic.txt
+  UK        uk2026-spring-classic.txt
+  UK        uknov2009f.txt
+  UK        uknov2010f.txt
+  UK        uknov2010q.txt
+  UK        uknov2011q.txt
+  UK        uknov2013f.txt
+  UK        uknov2014f.txt
+  UK        uknov2015a.txt
+  UK        uknov2015b.txt
+  UK        uknov2017.txt
+  UK        uknov2018cef.txt
+  UK        ukoct2019.txt

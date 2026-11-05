@@ -1,0 +1,4 @@
+# Versions the experiments were run with (Python 3.12, CPU only).
+# Older/newer versions will probably work; these are the tested ones.
+numpy==2.5.3
+torch==2.14.0

@@ -2,3 +2,6 @@
 # Older/newer versions will probably work; these are the tested ones.
 numpy==2.5.3
 torch==2.14.0
+
+# only for make_figures.py (the paper's figures were drawn with 3.10.9; 3.11.2 was used to check this script)
+matplotlib>=3.10

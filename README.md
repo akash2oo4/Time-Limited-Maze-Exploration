@@ -32,7 +32,8 @@ from the repository root.
 | Planner & episode | `solver.py`, `episode.py` | Dijkstra over (cell, heading), turn/cell timing, the sortie loop, scoring `S = T_fast + T_search/30` |
 | Policies | `route_seeking.py`, `oracle_bound.py` | The learned route-weighted policy with stall fallback (Section IV), the oracle upper bound |
 | Network | `cnn_heuristic.py`, `snapshot_dataset.py` | Dilated residual CNN (229,189 parameters), snapshot dataset builder, training (`train` sub-command) |
-| Evaluation | `batch_csv.py`, `paper_eval.py`, `seeds_summary.py`, `progress.py` | Paired benchmark over budgets, tables and 95% intervals, multi-seed summary |
+| Evaluation | `batch_csv.py`, `paper_eval.py`, `seeds_summary.py`, `baselines_eval.py`, `progress.py` | Paired benchmark over budgets, tables and 95% intervals, multi-seed summary, optimistic/oracle reference policies |
+| Figures | `make_figures.py`, `extract_curves.py` | Redraw the paper's figures into `figures/` from `results/` |
 | Official mazes | `official_mazes.py`, `maze_stats.py` | Filtering and running the public contest mazes (Section V), maze statistics (Table III) |
 | Remedies | `finetune_official.py`, `alpha_cv.py`, `contest_generator.py`, `contest_dataset.py`, `compare_foldB.py` | Fine-tuning on half the official mazes, coupling-strength re-tuning, contest-style generator, comparison on the unseen half (Section VI-C) |
 | Pipelines | `run_seeds.sh`, `run_official.sh`, `run_finetune.sh`, `run_contest.sh` | The whole experiment, stage by stage |
@@ -70,9 +71,9 @@ python3 seeds_summary.py results/rows_seed0.csv results/rows_seed1.csv results/r
 
 | Paper item | Model(s) in `models/` | Result files in `results/` |
 |---|---|---|
-| Table II, Figs 2, 3, 7a (generated mazes, 3 seeds) | `cnn_outbound_s{0,1,2}.pt` | `rows_seed{0,1,2}.csv`, `results_seed{0,1,2}.md`, `seeds_results.md` |
+| Table II, Figs 2, 3, 7a (generated mazes, 3 seeds) | `cnn_outbound_s{0,1,2}.pt` | `rows_seed{0,1,2}.csv`, `results_seed{0,1,2}.md`, `seeds_results.md`, `rows_baselines.csv`, `curves_training.csv` |
 | Official mazes, base networks (Section VI-B, Table IV "Base") | `cnn_outbound_s{0,1,2}.pt` | `rows_official_s{0,1,2}.csv`, `official_results.md`, `official_maze_list.txt` |
-| Fine-tuning (Section VI-C, Fig 7b, Table IV "Fine-tuned") | `cnn_ft_s{k}_on{A,B}.pt` (trained on half A / half B) | `rows_ft_s{0,1,2}.csv`, `finetune_results.md` |
+| Fine-tuning (Section VI-C, Fig 7b, Table IV "Fine-tuned") | `cnn_ft_s{k}_on{A,B}.pt` (trained on half A / half B) | `rows_ft_s{0,1,2}.csv`, `finetune_results.md`, `curves_finetune.csv` |
 | Coupling re-tuning (Fig 5, Table IV "α re-tuned") | same fine-tuned networks | `rows_alpha_s{0,1,2}.csv`, `alpha_choices.csv`, `alpha_results.md` |
 | Contest-style generator (Fig 6, Table IV "Contest-style") | `cnn_contest_s{0,1,2}.pt` | `rows_contest_s{0,1,2}_B.csv`, `contest_target.json`, `contest_results.md`, `rows_contest_random_s0.csv`, `contest_random_s0.md` |
 | Return-leg training data (Section VI-D, one seed) | `cnn_return_leg_s0.pt` | `rows_return_leg_s0.csv`, `results_return_leg.md` |
@@ -82,6 +83,22 @@ Notes on the `results/` files: `results_return_leg.md` was written when the netw
 (maze seed, policy, budget); `seeds_summary.py` and `paper_eval.py` turn them into the tables. The evaluation
 scripts temporarily copy the model under test to `cnn_heuristic.pt` in the working directory (an existing file
 is backed up to `cnn_heuristic.pt.bak` and restored).
+
+## Redrawing the figures
+
+`make_figures.py` redraws all eight figures of the paper from `results/` and writes them to `figures/`
+(the PDFs are included). It needs `matplotlib` in addition to `requirements.txt`.
+
+```bash
+pip install matplotlib
+python3 make_figures.py                           # Figs 1-3, 5-7 need nothing but results/
+python3 make_figures.py --maze-dir mazefiles/classic   # Figs 4 and 8 also need the official mazes
+```
+
+Figs 4 and 8 draw their own samples of generated and contest-style mazes with fixed seeds, so they show the
+same kind of picture as in the paper (route lengths 25 / 53 / 62 cells in Fig. 8) but not necessarily the
+identical mazes, and the generated-maze histogram in Fig. 4 differs slightly in its bins. The training curves
+in `results/curves_*.csv` were extracted from the run logs with `extract_curves.py`.
 
 ## Official maze data
 
@@ -96,8 +113,9 @@ selected (`results/official_maze_list.txt` lists which files were kept and why o
 - `batch_csv.py` contains an optional `--dqn` branch that imports a `dqn_agent` module. That reinforcement-learning
   arm was an abandoned experiment, is not part of the paper and is not included; the code path is never taken
   unless `--dqn` is passed.
-- The scripts that draw the paper's figures are not part of this repository; the figures are plotted from the
-  `rows_*.csv` files above.
+- `results/rows_baselines.csv` (optimistic-shortcut and oracle policies, Figs 2–3) was regenerated with
+  `baselines_eval.py` for this release, because the original rows for those two reference policies had not been
+  kept. It reproduces the paper's values (optimistic failures 0/0/1/1/5/10 across the six budgets, oracle 0).
 
 ## Citation
 
